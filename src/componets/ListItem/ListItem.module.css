@@ -1,0 +1,30 @@
+.item {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.title {
+    color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.accordion_item {
+    margin-left: 10px;
+}
+
+.item_child {
+    padding: 0 22px;
+}
+
+.item_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.item_info {
+    margin-left: 10px;
+}

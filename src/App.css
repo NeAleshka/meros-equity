@@ -1,0 +1,41 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #bfefe4;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    margin: 20px auto;
+    width: 100%;
+}
+
+
+h1 {
+    width: fit-content;
+    margin: 0 auto 15px;
+    font-weight: 400;
+}
+
+.search_input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    background-color: inherit;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+

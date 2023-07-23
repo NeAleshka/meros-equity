@@ -1,0 +1,24 @@
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #609860;
+    outline: none;
+    transition: border 0.3s;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #609860;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "\2713";
+    color: #FFFFFF;
+    font-size: 15px;
+    position: relative;
+    top: -2px;
+    left: 2px;
+}
