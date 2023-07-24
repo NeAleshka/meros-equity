@@ -20,11 +20,10 @@ const ListItem = ({Kod, Name, children, ID}: IListItem) => {
         id && changeFavoriteArray(favoriteArray.filter(item => item !== id))
         setIsAdded(false)
     }
-
     return (
         <div className={cls.item}>
             <div className={cls.item_wrapper} style={Number(Kod?.length) <= 2 ? {margin: '10px 0'} : {}}>
-                <CheckBox onClick={() => isAdded ? remove(ID) : add(ID)} defaultChecked={isAdded}/>
+                {Kod && Kod?.length > 2 && <CheckBox onClick={() => isAdded ? remove(ID) : add(ID)} defaultChecked={isAdded}/>}
                 <div className={cls.item_info}>{Kod} {Name}</div>
             </div>
             <div className={cls.item_child}>
