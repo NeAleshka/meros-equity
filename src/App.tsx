@@ -8,7 +8,6 @@ import {IListItem} from "./types";
 function App() {
     const [data, setData] = useState<IListItem[] | null>(null);
     const [search, setSearch] = useState('');
-
     const handleSearch = (searchValue: string) => {
         setSearch(searchValue)
     }
@@ -33,8 +32,6 @@ function App() {
             .catch(function (error) {
                 console.log('Ошибка:', error);
             });
-
-
     }, []);
 
 

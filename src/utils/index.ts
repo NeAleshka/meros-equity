@@ -23,13 +23,10 @@ export const refactor = (inputArray: any[]) => {
 }
 
 
-export const addToFavourite = ({event, id, favoriteArray, changeFavoriteArray}: IChangeFuncProps) => {
-    event.stopPropagation()
-    id && favoriteArray.push(id)
-    changeFavoriteArray(favoriteArray)
+export const addToFavourite = ({idArray, favoriteArray, changeFavoriteArray}: IChangeFuncProps) => {
+    idArray?.length && changeFavoriteArray([...favoriteArray, ...idArray])
 }
 
-export const removeFromFavourite = ({event, id, favoriteArray, changeFavoriteArray}: IChangeFuncProps) => {
-    event.stopPropagation()
-    id && changeFavoriteArray(favoriteArray.filter(item => item !== id))
+export const removeFromFavourite = ({idArray, favoriteArray, changeFavoriteArray}: IChangeFuncProps) => {
+    idArray?.length && changeFavoriteArray(favoriteArray.filter(item => !idArray.includes(item)));
 }

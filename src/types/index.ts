@@ -1,7 +1,5 @@
-import React from "react";
-
 export interface IListItem {
-    ID?: number;
+    ID: number;
     Section?: string;
     SectionName?: string;
     Kod?: string;
@@ -17,8 +15,7 @@ export interface IListItem {
 }
 
 export interface IChangeFuncProps {
-    event: React.MouseEvent<HTMLInputElement>,
-    id: number | undefined,
+    idArray: number[] | undefined,
     favoriteArray: number[],
     changeFavoriteArray: (array: number[]) => void
 }
